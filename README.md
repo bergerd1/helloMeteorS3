@@ -9,9 +9,6 @@ This project is set up in a straightforward way to easily deploy to the Modulus 
 2. Create a 'meteor' project 
 3. Create a mongodb 
 
-#### Download the zip file from this GitHub Repository
-Download the zip from this repo and upload it within the newly created project.
-
 #### Make sure your S3 bucket has the CORS HEADERS and bucket policy set up
 CORS HEADERS:
 ```
@@ -60,6 +57,27 @@ Once you have a mongodb and meteor project created you will need to add your env
 
 #### Restart your project
 Once you have added all of your env vars restart your project.  There is a button in the top-right-corner that says 'RUNNING.' Select this and a drop down will appear with the 'restart' button.
+
+#### Download the actual code and deploy that code
+1. Download the zip from this repo
+2. Run 'meteor' locally after extracting the zip
+3. deploy from the CLI or deploy from the web dashboard
+4. Deploy from the CLI by doing the following
+```
+$ meteor
+$ modulus deploy -p meteorHelloS3
+$ yes
+$ meteor
+$ 396
+```
+5. Deploy from the web dashboard by doing the following
+```
+in terminal:
+$ meteor
+$ zip -r -X meteorS3.zip ./
+upload resulting zip file on web dashboard
+```
+
 
 #### Check your logs for errors
 If you inadvertently made any mistakes, you will want to check your logs on the project dashboard for any errors.  This will help you troubleshoot the app if you get 'Unable to connect to any application instances.' error when going to your project URL.
