@@ -38,7 +38,7 @@ bucket policy:
                 "AWS": "*"
             },
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::mod.support/*"
+            "Resource": "arn:aws:s3:::YourS3bucketNameHere/*"
         }
     ]
 }
